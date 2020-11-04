@@ -1,0 +1,28 @@
+PROCEDIMENTO PARA INSERIR TECLADO VIRTUAL 
+
+--INSERIR NA PAGINA 
+	
+-------JAVASCRIPT - File URLs
+	#APP_IMAGES#jquery.keyboard.js
+
+-------CSS - File URLs
+	#APP_IMAGES#keyboard.min.css
+
+-------EXECUTE WHEN PAGE LOADS (INSERIR O CODIGO ABAIXO PARA CADA CAMPO DESEJADO)
+
+	$('#P12_PESO_DIVERGENTE')
+    	 .keyboard({
+    		layout : 'custom',
+            customLayout: {
+			'normal' : [
+                '1 2 3 4',
+				'5 6 7 8',
+				'9 0 ,',
+				'{bksp} {a} {c}'
+			]
+		},
+    		restrictInput : true, // Prevent keys not in the displayed keyboard from being typed in
+    		preventPaste : true,  // prevent ctrl-v and right click
+    		autoAccept : true
+    	});
+
